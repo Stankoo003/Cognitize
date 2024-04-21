@@ -2,20 +2,21 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:video/main.dart';
+import 'package:video/medjuscreen.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
   static const String uri = "http://192.168.0.100:5000/predmeti";
 
-  
   Future<List<String>> fetchNames() async {
     final response = await http.get(Uri.parse(uri));
-    if(response.statusCode==200){
+    if (response.statusCode == 200) {
       return List<String>.from(jsonDecode(response.body)['nazivi']);
-    }else{
+    } else {
       throw Exception("Doslo je do greske prilikom ucitavanja predmeta");
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,25 +72,26 @@ class ProfileScreen extends StatelessWidget {
                     itemBuilder: (context, index) {
                       return Column(
                         children: [
-                          SizedBox(height: 10,),
+                          SizedBox(
+                            height: 10,
+                          ),
                           ElevatedButton(
                             child: Text(snapshot.data![index].toString()),
                             onPressed: () {
                               Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => HomePage(name: snapshot.data![index].toString()),
-      ),
-    );
-
-
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => medjuScreen(
+                                      ime: snapshot.data![index].toString()),
+                                ),
+                              );
                             },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Color(0xFFC99750),
                               padding: EdgeInsets.all(20.2),
                               fixedSize: Size(300, 80),
-                              textStyle:
-                                  TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                              textStyle: TextStyle(
+                                  fontSize: 25, fontWeight: FontWeight.bold),
                               shadowColor: Color(0xFFC99750),
                               elevation: 15,
                             ),
@@ -102,7 +104,7 @@ class ProfileScreen extends StatelessWidget {
               } else if (snapshot.hasError) {
                 return Text("${snapshot.error}");
               }
-          
+
               return CircularProgressIndicator();
             },
           ),
