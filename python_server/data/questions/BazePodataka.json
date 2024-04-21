@@ -1,0 +1,22 @@
+[
+{
+"prednja": "Kakva je razlika između podataka i informacija?",
+"zadnja": "Podatak je pojedinačna činjenica, dok je informacija rezultat analize podataka koji pruža novo znanje."
+},
+{
+"prednja": "Šta je prednost sistema baze podataka nad tradicionalnim načinom rada sa datotekama?",
+"zadnja": "Baza podataka omogućava više aplikacija i korisnika da koriste iste podatke, dok tradicionalni sistemi često vode do dupliranja i nekonzistentnosti podataka."
+},
+{
+"prednja": "Koji softver upravlja bazama podataka?",
+"zadnja": "Sistem za upravljanje bazama podataka (DBMS) definiše, kreira i manipuliše podatke u bazi."
+},
+{
+"prednja": "Kako se zove kolekcija povezanih tabela koje čine bazu podataka?",
+"zadnja": "Relaciona baza podataka."
+},
+{
+"prednja": "Da li baze podataka moraju da budu digitalne?",
+"zadnja": "Ne, baza podataka je samo organizovana kolekcija podataka, koja može biti i fizička kolekcija dokumenata ili predmeta."
+}
+]

@@ -1,0 +1,30 @@
+[
+{
+"prednja": "Koje su glavne lokacije memorie u računarskom sistemu?",
+"zadnja": "Memorija računara može biti unutrašnja (registri, keš, glavna memorija) ili spoljašnja (diskovi, optičke memorije, fleš kartice)."
+},
+{
+"prednja": "Šta je kapacitet memorije?",
+"zadnja": "Kapacitet memorije se odnosi na količinu podataka koju memorija može da skladišti. Mjeri se u bajtovima (B), kilobajtima (KB), megabajtima (MB), gigabajtima (GB) i terabajtima (TB). Fleš kartice obično imaju kapacitet od nekoliko gigabajta."
+},
+{
+"prednja": "Kako se podaci prenose u memoriji?",
+"zadnja": "Podaci se prenose u memorijskim blokovima koji se nazivaju jedinice transfera. Kod fleš kartica, jedinica transfera je obično veća od pojedinačne reči (grupe bitova) u memoriji."
+},
+{
+"prednja": "Koje su vrste pristupa memoriji?",
+"zadnja": "Postoje četiri glavne vrste pristupa memoriji: sekvencijalni, direktni, slučajni i asocijativni. Fleš memorija obično koristi flash-memoriju koja omogućava slučajni pristup, što znači da se može direktno pristupiti bilo kojoj lokaciji u memoriji."
+},
+{
+"prednja": "Šta se podrazumeva pod performansama memorije?",
+"zadnja": "Performanse memorije se odnose na brzinu pristupa podacima. Kod fleš kartica, važno je vreme pristupa (vreme potrebno da se podatak pročita ili upiše) i brzina prenosa (brzina kojom se podaci prenose)."
+},
+{
+"prednja": "Kakve su prednosti fleš kartica?",
+"zadnja": "Fleš kartice su popularne zbog nekoliko prednosti: prenosne su, imaju veliki kapacitet za svoju fizičku veličinu, otporne su na udare i vibracije, i imaju nisku potrošnju energije."
+},
+{
+"prednja": "Da li postoje nedostaci fleš kartica?",
+"zadnja": "Fleš kartice generalno imaju sporiji pristup podatcima i brzinu prenosa od nekih internih memorija kao što je RAM. Takođe, one mogu eventualno da propadnu nakon određenog broja čitanja i upisivanja."
+}
+]

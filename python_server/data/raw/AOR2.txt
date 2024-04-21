@@ -1,0 +1,111 @@
+1 
+ARHITEKTURA I ORGANIZACIJA 
+RAČUNARA MEMORIJSKI SISTEM (1) UVOD RAČUNARSKA MEMORIJA Mada  je naizgled  konceptualno  jednostavna , 
+računarska  memorija  ima možda  najširi  opseg tipova , tehnologija , organizacije , performansi  i 
+cena  od svih računarskih  komponenti . Posedica : računarski  sistem  je opremljen hijerarhijom  memorija , od kojih  su neke unutrašnje  (direktno  pristupačne  procesoru ), a 
+neke  spoljašnje  (pristupačne  procesoru  preko U/I modula ). 
+ 2 
+KLjUČNE  KARAKTERISTIKE MEMORIJSKIH SISTEMA Lokacija Kapacitet Jedinica  prenosa Metoda  pristupa Vremenske  performanse Parametri  memorije Fizička  vrsta Fizičke  karakteristike Organizacija LOKACIJA Pojam  lokacija  odnosi  se na to da li je 
+memorija  unutrašnja  ili spoljašnja . 
+U okviru  same centralne  procesorske  jedinice (registri  CPU) Unutrašnja  (keš memorija , glavna  memorija ) 
+Spoljašnja  memorija  (diskovi , optičke memorije  ...) 3 
+KAPACITET Veličina  reči 
+Prirodna  jedinica  organizacije Obično  jednaka  broju  bitova  za predstavnjanje celog  broja  i dužini  instrukcije ; mnogo izuzetaka ! 
+Uobičajene  dužine  reči su 8, 16 i 32 bita 
+Broj reči 
+ili bajtova JEDINICA  PRENOSA Ono što može odjednom da se prenes е 
+Unutrašnja  memorij а 
+Obično  uslovljena  širinom  magistrale  podataka  tj. jednaka  je 
+broju  linija  za podatke  koji vode  u memorijski  modul  i iz 
+njega Spoljašnja  memorij а 
+Obično blok koji je mnogo veći od reči 
+Adresabilna  jedinica Najmanja  lokacija  koja može  jedinstveno  da se adresira Reč ili (češće ) bajt 
+Odnos  između  adrese  u bitovima  A i broja  adresabilnih  jedinica N je ^A= 
+Blok na diskovima  4 
+METODA  PRISTUPA  (1) Sekvencijalni  pristup Koristi  se deljivi  mehanizam  za čitanje /upisivanj е 
+Start na početku i čitanje potpuno , po redosledu Vreme  pristupa  zavisi  od lokacije  podatka  i prethodne  lokacije Primer : magnetna  traka Direktan  pristup Koristi  se deljeni  mehanizam  za čitanje /upisivanje Individualni  blokovi  imaju  jedinstvene  adrese , zasnovane  na 
+fizičkoj  lokaciji Pristup  je pomoću  skokova  u blizini  plus sekvencijalno pretraživanje Vreme  pristupa  zavisi  od lokacije  i prethodne  lokacije Primer : Disk METODA  PRISTUPA  (2) Slučajni  pristup Individualne  adrese  tačno  identifikuju  lokacije Vreme  pristupa  ne zavisi  od lokacije  ili prethodnog pristupa Primer : RAM memorij а 
+Asocijativan  pristup Podatak  se locira  poređenjem  sa sadržajem  dela 
+memorije Vreme  pristupa  ne zavisi  od lokacije  ili prethodnog pristupa Primjer : Keš memorije  5 
+PERFORMANSE Sa stanovišta  korisnika , pored kapaciteta , 
+najvažnija  karakteristika  memorij а Koriste se tri parametra performanse : 
+1.Vreme  pristupa  (kašnjenje , latencija  memorije ) 
+2.Vreme  ciklusa  memorije 3.Brzina  prenosa  (propusnost  memorije ) 
+Vreme  pristupa  (kašnjenje ) Za memoriju  sa slučajnim  pristupom : Vreme potrebno  da se izvede  operacija čitanja /upisivanja  (od trenutka  kada  se 
+predstavi  adresa , do trenutka  kada  se podatak uskladišti  ili stavi  na raspolaganje  za upotrebu ) Za memoriju  koja nema  slučajni  pristup : Vreme potrebno  da se zauzme  položaj  mehanizma  za 
+čitanje /upisivanje  na željenoj  lokaciji  6 
+Vreme  ciklusa  memorije Koncept  prvenstveno  za memorije  sa slučajnim pristupom Vreme  pristupa  + svako  dodatno  vreme  koje se 
+zahtjeva  prije  nego  što može  da počne  sledeći pristup  (za prelazna  stanja  na signalnim linijama , ili za obnavljanje  podataka  ako se oni 
+destruktivno  čitaju ) 
+Najkraća  perioda  sa kojom  memorija  može uspešno  prihvatiti  uzastopna  obraćanja Vreme ciklusa memorije je u vezi sa 
+sistemskom magistralom, a ne sa procesorom Brzina  prenosa  Brzina  kojom  se podaci  prenose  u memorijsku  jedinicu  ili iz 
+nje. 
+Za memoriju  sa slučajnim  pristupom : (   ) Za memoriju koja nije sa  slučajnim  pristupom : 
+=+ TN = srednje  vreme  čitanja  ili upisivanja  n bitova TA = srednje  vreme  pristupa n  = broj bitova R = brzina prenosa, u bitovima u sekundi (b/s)  7 
+PARAMETRI MEMORIJA Pored kapaciteta i tri parametra vremenskih 
+performansi važni kvantitativni parametri 
+memorija su : 
+Snaga  disipacije  predstavlja  snagu  koju  zahteva memorija  za svoj rad 
+Specifična  cena  memorije  koja se izražava  odnosom cene  memorije  i njenog  kapaciteta Pouzdanost  koja se meri  srednjim  vremenom  između otkaz а 
+FIZIČKE  VRSTE  MEMORIJA Poluprovodnička  memorij а 
+RAM (DRAM, SRAM), ROM (PROM, EPROM, EEPROM), 
+fleš, itd. 
+Magnetna  memorij а 
+Čvrsti  disk i magnetna  trakа 
+Optička  memorij а 
+CD i DVD  8 
+FIZIČKE  KARAKTERISTIKE Gubitak  informacije : u nepostojanoj  memoriji , 
+informacija  propada  prirodnim  putem , ili se 
+gubi  kada  se isključi  napajanje  električnom energijom . 
+U trajnoj  memoriji , jednom  zapisana informacija  opstaje  bez oštećenja , dok je 
+korisnik  namerno  ne promeni ; nije potrebna električna  energija  da bi se zadržala informacija . 
+Memorija  sa magnetnom  površinom  su trajne . 
+Poluprovodnička  memorija  može  da bude nepostojana  ili trajna . 
+Izbrisivost : EPROM, EEPROM Organizacija Ključno  pitanje  za memoriju  sa 
+slučajnim /proizvoljnim  pristupom . 
+Organizacija : fizički  raspored  bitova  da bi se 
+formirale  reči 
+Ne koristi  se uvijek  očigledan  raspored  9 
+MEMORIJSKA  HIJERARHIJA  (1) Konstruktivna  ograničenja  memorijske hijerarhije Koliko  je ima? 
+Stalno  otvoreno ; kapacitet  će se uvek  iskoristiti  za 
+nove  aplikacij е 
+Koliko  je brza? 
+Memorija  mora biti u stanju  da drži korak  sa 
+procesorom Koliko  košta ? 
+Cena sistema mora da bude razumna u odnosu na 
+druge komponent е 
+MEMORIJSKA  HIJERARHIJA - DIJAGRAM  10 
+HIJERARHIJSKA  LISTA  MEMORIJA 1.Registri 2.Keš memorija nivoa L1 3.Keš memorija nivoa L2 4.Glavna memorija 5.Keš diska ( deo glavne memorije, za podatke 
+koji se upisuju na disk) 6.Disk 
+7.Optička memorija 8.Magnetna traka MEMORIJSKA  HIJERARHIJA  (2) Kako  se ide niz tipičnu  hijerarhiju  ilustrovanu na slici moguće  je primetiti : 
+Smanjuje  se cijena  po bitu 
+Povećava  se kapacitet Povećava  se vreme  pristupa Smanjuje  se učestlost  pristupa  memoriji  od strane procesor а 11 
+MEMORIJSKA  HIJERARHIJA  (3) Registarska  memorij а uključuje  registre  unutar  procesora Uglavnom  registri  opšte  namjene  kao i registri  za rad 
+sa realnim  podacima Privremeno  čuvanje  operanda  i instrukcija  u 
+procesoru Ne unosi  zastoje  u radu  procesora MEMORIJSKA  HIJERARHIJA  (4) Keš memorij а 
+Brza  memorija  između  procesora  i glavne  memorije Aktuelne  instrukcije  i podaci  za aktivne  programe Procesor  se prvo  obraća  keš memoriji , a ako se 
+podatak  ne nalazi  u kešu  onda  se obraća  glavnoj memoriji Mnogo  manji  kapacitet  od glavne  memorije Kada  procesor  iz keša  dobija  tražene  podatke  ne unosi zastoje  u radu  procesora  12 
+MEMORIJSKA  HIJERARHIJA  (5) Glavna (primarna ili operativna) memorij а 
+Velikog  kapaciteta Sadrži  programe  i podatke  koji se aktivno  koriste Mnogo  sporija  od registarske  (veći kapacitet , fizička odvojenost  od procesora ) 
+MEMORIJSKA  HIJERARHIJA  (6) Spoljašnja  (sekundarna  ili pomoćna ) memorija Čuvaju  se sistemski  programi , veliki  fajlovi podataka , korisnički  programi  i podaci  koji ne 
+zahtevaju  stalno  prisustvo  u memoriji Komunicira sa GM preko UI sistema računara  13 
+MEMORIJSKA  HIJERARHIJA  (6) Ključ uspeha je da podaci i instrukcije mogu da 
+se rasporede tako da u najvećem delu vremena 
+budu raspoloživi, kada su potrebni, na gornjim 
+nivoima hijerahije. Podaci koji se drže u registrima su pod 
+direktnim upravljanjem programera 
+kompajlera ili asemblera. Sadržajem ostalih nivoa hijerarhije se upravlja 
+automatski: migracija podataka / instrukcija ka i od keš memorija 
+se izvodi pod hardverskim upravljanjem; migracijom izmedju  glavne memorije i spoljnih 
+memorija upravlja OS (uz hardversku podršku). MEMORIJSKA  HIJERARHIJA  (7) Oslonci  hijerarhijske  organizacije  memorije  su: 
+Princip lokalnosti  (preciznije  lokalnosti  obraćanja programa  memoriji ) 
+Fizički  zakoni  koji se, primjenjeni  na hardver računara , mogu  formulisati  u obliku  aksiome : manje je brže 14 
+Princip lokalnosti Za vreme  izvršenja  programa , memorijske reference procesora , kako  za instrukcije , tako  i 
+za podatke , teže da se grupišu . 
+Jednom kada se uđe u neko područje 
+programa, javljaju se ponovljene reference na 
+malom skupu instrukcija (petlje, potprogrami ) podataka (komponente strukture podataka, lokalne 
+promenljive ili parametri na steku. Vrste  lokalnosti Vremenska  lokalnost : ako se poziva  neka stavka  u memoriji , ona će velika  je 
+verovatno ća da uskoro  bude  opet  pozvana . Prostorna  lokalnost : ako se poziva  neka  stavka u memoriji , velika  je verovatno ća da će i druge stavke  čije su adrese  u blizini  uskoro  biti 
+pozvane . 
+ 

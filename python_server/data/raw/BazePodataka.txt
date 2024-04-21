@@ -1,0 +1,488 @@
+Uvod u Baze podataka
+Baze
+ podataka
+Katedra za računarstvo
+Elektronski fakultet u Nišu
+Prof.dr Leonid Stoimenov
+11
+Uvod u baze podataka -Pregled
+Osnovni pojmovi
+Šta je Podatak, informacija ?
+Šta je Baza podataka ?
+Šta je Sistem za upravljanje bazama podataka ?
+Šta je Aplikacija nad bazom podataka ?
+Šta je Sistem baza podataka ?
+Konvencionalna obrada i obrada zasnovana na bazama 
+podataka
+Sistem baza podataka
+Kategorizacija korisnika baza podataka
+Istorijat baza podataka
+Prednosti i nedostaci
+21
+Podatak i informacija
+Podatak (lat. datum deoinformacije ,  eng. Data)
+Jednostavna neobra đena izolovana činjenica koja ima neko značenje i 
+koja se obrađuje i čuva na računaru
+Podaci su znakovni prikaz činjenica i pojmova koji opisuju svojstva 
+objekata
+Obrada podataka proces prevođenja podataka u 
+informacije
+Informacija (lat. Informare , eng. Information ) -rezultat analize i 
+organizacije podataka na način da daje/generiše novo znanje
+Znanje ... 
+(kurs Veštačka inteligencija, VII semestar)
+Mudrost ... 
+31Konvencionalni sistemi
+Tradicionalni pristup (sistem zasnovan na datotekama
+engl. File-based system )
+Ad hoc pristup : datoteka iliskup datoteka podataka potrebnih
+zadefinisanu aplikaciju
+Razvijaju se programi kojiobrađujupodatke izdatoteka
+Svaki program definiše sopstvene podatke i upravlja tim 
+podacima
+Obrada podataka (engl. Data Processing )
+Često se koristi pojam Automatska obrada podataka 
+(AOP) 
+pojedine aplikacije jednog informacionog sistema (IS) 
+međusobno nezavisne i kod koje se za svaku aplikaciju kreiraju i 
+održavaju posebn edatoteke sa svim potrebnim podacima
+41Obrada zasnovana na datotekama
+Datoteke
+prodaje
+Prodaja
+NabavkaDatoteke
+nabavke
+Unos
+podataka i 
+štampanje
+izveštaja
+Rutine za
+rukovanje
+datotekama
+Definicije
+datoteka
+Unos
+podataka i 
+štampanje
+izveštaja
+Rutine za
+rukovanje
+datotekama
+Definicije
+datoteka
+Aplikacioni program prodaje
+Aplikacioni program nabavke
+51 Osnovne karakteristike sistema 
+zasnovanog na datotekama 
+Definicija podataka je ugrađena u aplikacioni program
+poželjno je da bude odvojena i nezavisna
+Ne postoji kontrola pristupa podacima, osim one koju 
+vrše aplikacioni programi
+poželjna potpuna kontrola pristupa podacima i to nezavisno 
+od konkretnog aplikacionog programa
+61 Prednosti i nedostaci 
+konvencionalne obrade
+Prednosti
+Jednostavnost 
+projektovanja i 
+realizacijeNedostaci
+Nepovezanost aplikacija
+Ponavljanje podataka
+Neusaglašenost (nekonzistentnost) podataka
+Čvrsta povezanost programa i podataka
+Programi zaobradu podataka zavise odnačina
+struktuiranja podataka
+Promena strukture podataka zahteva promenu programa
+Ograničena mogućnost zajedničkog korišćenja 
+podataka
+Ograničena raspoloživost podataka
+Neadekvatna realizacija oporavka odpada
+sistema
+Posledice:
+Obrada podataka je skupa
+71
+Rešenje problema: baza podataka
+Baza podataka t reba da obezbedi:
+Nezavisnost struktura podataka od programa koji ih 
+obrađuju, 
+Nezavisnost programa od struktura podataka;
+Minimalnost ponavljanja podataka;
+Da obrada podataka nije vezana za programski jezik opšte 
+namene, već za viši upitni jezik;
+Korišćenje baze podataka od strane većeg broja korisnika.
+81
+Šta je baza podataka?
+Baza podataka (engl. Data Base, Database ):
+ Integrisana kolekcija podataka o nekoj organizaciji
+Primer organizacija : kompanija, banka, fakultet, grad, biblioteka, 
+supermarket
+Primer: Fakultetska baza podataka 
+ Obuhvata podatke o:
+Entitetima objekti realnog sveta
+ studijski programi, 
+ studenti, 
+ predmeti, 
+ učionice
+Vezama među ovim entitetima, 
+ student sluša predmet, 
+ predmet se izodi u učionici, 
+ predmet pripada studijskom programu
+91
+Baza podataka kao kolekcija podataka
+Baza podataka predstavlja kolekciju povezanih podataka 
+organizovanih u logičke celine predstavljene tabelama . 
+Skup podataka pripremljen tako da se mogu jednostavno 
+koristiti , tj. pregledati, pretraživati, sortirati, upore đivati, itd., 
+ali i menjati.
+Podaci u bazama podataka su organizovani u 
+dvodimenzionalne tabele ili relacije
+Relacione baze podataka
+Skup relacija/tabela
+Tabela može da ima više kolona , gde svaka kolona predstavlja neku 
+osobinu iliatribut . 
+Vrste tabele čine konkretni podaci, odnosno konkrente vrednosti 
+osobina/atributa nekog objekta. 
+101
+Podaci u bazi podataka
+Dvodimenzionalna tabela (slika: tabela Student)
+Kolone -osobine tj atributi objekta realnog sveta
+Vrste predstavlja jedan slog podataka o nekom objektu
+Redosled podataka u tabeli nije relevantan
+Nema duplikata ili je njihov broj minimalanIme Prezime Indeks MBR
+Petar Petrović 1111 123456
+Milan Milanović 2222 654321
+Jovan Jovanović 3333 345612
+111 Relaciona baza podataka primer veza 
+između podataka
+Podaci o 
+ADVISER u su 
+povezani sa 
+STUDENT om 
+preko 
+AdviserData
+121 Relacione baze podataka primer rešavanja 
+problema ažuriranja podataka 
+Dodata nova vrsta 
+ne zahtevaju se 
+podaci o STUDENTu
+Promenjen podatak 
+podaci ostaju 
+konzistentni
+Obrisana vrsta ne 
+gube se podaci o 
+ADVISERu
+131
+Baza podataka kao aspekt realnog sveta
+Slučajni skup podataka nije baza podataka !!
+Baza podataka se projektuje i gradi za specifičnu namenu
+ Namenjena je konkretnim korisnicima za konkretne namene
+Baza podataka 
+ predstavlja neki aspekt realnog sveta organizacije 
+ tzvminisvet deo realnog sveta za koji je neophodno 
+čuvati i obrađivati podatke 
+ Baza podataka za Fakultet podaci o studentima, ispitima, 
+nastavnicima
+ Promene u minisvetu utiču na bazu podataka
+ Promena u nastavnim planovima utiče na bazu podataka
+ Promene u podacima 
+ Promene u tabelama
+141
+Baze podataka: više posla?
+Relacione baze podataka su na prvi pogled 
+komplikovanije od konvencionalnog pristupa
+Ipak, prednosti su značajne 
+pre svega minimizacija redundanse podataka, kao i 
+očuvanje kompleksnih veza između podataka
+Relaciona baza podataka predstavlja osnovu za 
+korisničke forme i izveštaje
+Više drugačijih poslova administracija, održavanje 
+podataka...
+151 Šta je sistem za upravljanje 
+bazama podataka?
+
+Sistem za upravljanje bazama podataka (engl. Data Base 
+Management System, DBMS)
+Softverski sistem koji omogućava definisanje, kreiranje i 
+manipulisanje bazom podataka
+Definisanje :Specificiranje tipova podataka, struktura i ograničenja 
+za podatke koje treba memorisati u bazi podataka
+Kreiranje :Proces memorisanja podataka na nekom medijumu koji 
+kontroliše DBMS
+Manipulisanje :Postavnjanje upita bazi podataka da bi se našli 
+specifični podaci, ažuriranje baze podataka da bi se unele promene 
+nastale u mini svetu i generisanje izveštaja na osnovu podataka 
+memorisanih u bazi podataka 
+161
+Šta je aplikacija baze podataka?
+
+Aplikacija baze podataka (engl. Database application, 
+DB application)
+Program koji interaguje sa bazom podataka u toku svog 
+izvršenja
+Interakcija programa i baze podataka se obavlja preko 
+DBMS -a
+Program šalje zahteve DBMS -u i DBMS vraća programu 
+odgovor na ovaj zahtev
+DBMS
+ DB aplikacija Baza podataka
+171
+Šta je sistem baze podataka?
+
+Sistem baze podataka (engl. Database System) 
+Kolekcija aplikacionih programa  koji interaguju sa 
+bazom podataka, DBMS i baza podataka
+DBMS DB aplikacija Baza podataka
+Sistem baze podataka
+181 Obrada zasnovana na bazama 
+podataka
+DBMS
+Unos podataka i 
+štampanje izveštaja
+Aplikacioni programi 
+prodaje
+Unos podataka i 
+štampanje izveštaja
+Aplikacioni programi 
+nabavkeProdaja
+NabavkaSistem baze podataka
+Baza
+podataka
+191 Uprošćena struktura sistema bazepodataka
+Aplikativni programi /Upiti
+Softver za obradu
+upita/programa
+Softver za pristup 
+memorisanim podacima
+Memorisana 
+baza podatakaMemorisane definicije
+baze podataka
+(Meta podaci)DBMSSistem baza podatakaKorisnici / Programeri
+201 Prilaz zasnovan na bazama 
+podataka
+Baza podataka
+Deljiva kolekcija logički povezanih podataka i definicija tih 
+podataka, projektovana sa ciljem da zadovolji informacione 
+potrebe neke organizacije
+Važne odrednice
+Podaci su deljivi
+Baza podataka s adrži i podatke i njihove definicije (opisi, šeme)
+Definicije podataka se nalaze u katalogu sistema (rečnik 
+sistema) i nazivaju se meta podaci
+Definicije podataka su odvojene od aplikacionih programa
+Podaci su logički povezani (entiteti, atributi, veze)
+211
+Svojstva prilaza zasnovanog na BP
+Opisi podataka i ograničenja nad podacima 
+(tzv. meta podaci ) su sastavni deo sistema baze 
+podataka
+Opisi se nalaze u sistemskom katalogu koji je 
+dostupan i DBMS -u i korisnicima kojima je 
+potrebno poznavanje strukture baze podataka
+Nezavisnost programa i podataka
+Opisi podataka su u DBMS katalogu i nezavisni su 
+od programa za pristup podacima 221 Uloge u okruženju baza podataka 
+(osoblje)
+Administrator podataka i administrator baze podataka
+Data Administrator (DA)
+Database Administrator (DBA)
+Projektant baze podataka (eng. Database Designer)
+Projektant logičke baze podataka
+Projektant fizičke baze podataka
+Inženjer razvoja aplikacija (eng. Application Developer)
+aplikacioni programer
+Krajnji korisnici (eng. End -Users)
+Slučajni korisnici
+Naivni ili parametarski korisnici
+Napredni ili Sofistični korisnici
+231
+Odgovoran je za menadžment podataka kao 
+resursa, uključujući:
+Planiranje, razvoj i održavanje standarda, politike i 
+procedura
+Konceptualno i logičko projektovanje baze podataka
+Njegov zadatak je da obezbedi DB podršku  za 
+ostvarenje postavljenih ciljeva korporacije za koju 
+radiAdministrator podataka
+241
+Administrator baze podataka
+Odgovoran je za fizičku realizaciju sistema baze 
+podataka, uključujući:
+Fizičko projektovanje i implementaciju baze podataka
+Sigurnost i integritet
+Održavanje sistema u radnom stanju
+Obezbeđenje odgovarajućih performansi aplikacija za 
+potrebe korisnika (monitoring i reorganizacija, po potrebi)
+251Glavni zadaci DB i DBA
+DA
+Učestvuje u strateškom planiranju 
+IS-a
+Utvrđuje dugoročne ciljeve
+Nameće standarde, politiku i 
+procedure
+Utvrđuje zahteve za podacima
+Razvija konceptualni i ligički 
+projekat baze podataka
+Razvija i održava zajednički model 
+podataka
+Koordinira razvoj sistema
+Orijentisan je ka menadžmentu
+DBMS nezavistanDBA
+Evaluira nove DBMS -e
+Izvršava planove radi ostvarenja 
+ciljeva
+Nameće standarde, politiku i 
+procedure
+Implementira zahteve za podacima
+Razvija logički i fizički projekat baze 
+podataka
+Implementira fizički projekat baze 
+podataka
+Nadzire i kontroliše bazu podataka
+Orijentisan je ka tehnici
+DBMS zavistan
+261
+Korisnici baze podataka
+Akteri na sceni
+Administrator baze 
+podataka
+Projektanti baze podataka
+Aplikacioni programeri
+Sistem analitičari
+Krajnji korisnici
+Slučajni
+Naivni
+NapredniAkteri iza scen e
+Projektanti DBMS -a
+Inženjeri razvoja DBMS -a
+Operateri
+Osoblje za održavanje 
+sistema baze podataka
+271Krajnji korisnici
+Krajnji korisnici sulicačijiposao zahteva pristup bazi
+podataka radipretra živanja , ažuriranja i generisanja izveštaja
+Vrste krajnjih korisnika
+Slučajnikorisnici povremeno pristupaju bazipodataka , njihovi
+zahtevi suvrlopromenjivi i nisuunapred definisani
+Zanjihse projektuju posebni upitni jezici i dodatna softverska pomagala
+Naivni (parametarski )korisnici ažuriraju bazu podataka i 
+koriste ći standardne upite dobijaju potrebne podatke izbaze
+podataka
+Primer ovihkorisnika suslužbenici našalterima
+Ovikorisnici uvek obavljaju istuobradu nadbazom podataka i za njih se 
+razvijaju posebne DB aplikacije
+Napredni (sofisti čki) korisnici imaju znanje o DBMS -utakoda
+mogu formulisati vrlosloženezahteve
+Primer takvih korisnika suinženjeri , naučnici, istraživači, analiti čari
+281
+Tipovi sistema baza podataka
+Single -user:
+Podrška samo za jednog korisnika u isto vreme
+Desktop:
+Single -user baza podataka na personal nom računaru
+Multi-user:
+Podrška za više korisnika u isto vreme
+Workgroup:
+Multi-user baza podataka za mali broj korisnika ili jedno 
+odeljenje preduzeća
+Enterprise:
+Multi-user baza podataka koja podržava veliki broj korisnika ili 
+celo preduzeće/organizaciju
+291
+Tipovi sistema baza podataka
+Klasifikacija po lokaciji :
+Centraliz ovane :
+Podaci su na jednoj lokaciji
+Distribu irane:
+Podaci mogu biti na više lokacija
+Po načinu korišćenja :
+Transa kcione(iliprodu kcione):
+Podrška za day-to-dayopera cije preduzeća
+Data warehouse:
+Čuva podatke koji se koriste za generisanje informacija 
+potrebnih za strateške odluke. 
+Često sadrže istorijske podatke i imaju drugačiju strukturu
+301
+Prednosti DBMS -a
+Nezavisnost podataka
+Aplikacioni programi su nezavisni od reprezentacije i načina memorisanja podataka
+DBMS nudi aplikaciji apstraktni pogled na podatke 
+Efikasan pristup podacima
+DBMS koristi posebne tehnike za efikasno memorisanje i pretraživanje podataka
+Integritet i bezbednost podataka
+DBMS kontroliše integritet podataka koristeći ograničenja koja je definisao projektant 
+baze podataka
+DBMS nadgleda pristupne privilegije korisnika, tako da svaki korisnik može videti samo 
+podatke za koje poseduje pristupne privilegije 
+Administracija podataka
+Kada su podaci deljivi centralizovana administracija podataka donosi značajno poboljšanje
+Za to je zadužen administrator baze podataka
+Konkurentni pristup i oporavak
+DBMS upravlja konkurentnim pristupom podacima od strane više korisnika
+DBMS ima ugražene mehanizme oporavka baze podataka od različitih neispravnosti
+Kraće vreme razvoja aplikacija
+DBMS ima ugrađene različite funkcije za rad sa podacima što aplikacionim programerima 
+značajno olakšava zadatak razvoja aplikacije 
+DBMS nudi interfejs iz jezika visokog nivoa ka bazi podataka
+311
+Nedostaci DBMS -a
+Složenost
+Veličina
+Troškovi za DBMS
+Dodatni troškovi za HW
+Troškovi konverzije
+Performanse
+Veći uticaj neispravnosti
+321
+Istorijat DBMS -a -1.deo
+60-tih godina 20 -tog veka 
+projekat Apollo, na inicijativu predsednika Kenedija
+Rezultat ovog projekta je GUAM (Generalized Update Access Method)
+Sredinom 60 -tih 
+IBM je prihvatio GUAM ideju i razvio IMS (Information Management System) to je 
+hijerarhijski DBMS
+Sredinom 60 -tih godina 
+General Electric  je razvio IDS (Integrated Data Store) to je mrežni DBMS
+Prvi DBMS opšte namene koga je projektovao Charles Bachman, prvi dobitnik T uring -ove 
+nagrade koju dodeljuje ACM (ekvivalent Nobelove nagrade za Računarske nauke)
+Bachman je nagradu dobio za rad u oblasti baza podataka
+1967. je formirana ,u okviru CODASYL -a,Database Task Group (DBTG) koja je 
+uradila standard za DBMS:
+1969 draft report
+1971 final report
+331
+Istorijat DBMS -a -2.deo
+1970. E.F .Codd iz IBM Research Lab je predložio relacioni model
+Prvi komercijalni relacioni DBMS su proizvedeni krajem 70 -tih i 
+početkom 80 -tih godina 20 -tog veka:
+Projekat System R (IBM) krajem 70 -tih (SQL)
+DB2 i SQL/DS (IBM) 80 -tih
+Oracle (Oracle Corporation) 80 -tih
+Danas postoji na hiljade relacionih DBMS -ova za mainframe i PC 
+okruženja:
+INGRES (Computer Associates)
+INFORMIX, DB2 (IBM)
+Office Access, Visual FoxPro (Microsoft)
+InterBase, JDataStore (Borland)
+R:Base (R:Base T echnologies )
+341
+Istorijat DBMS -a -3.deo
+1976. Chen je predložio ER model
+1979. Codd je predložio proširenu verziju relacionog 
+modela RM/T i 1990. RM/V2 koji se ubraja u semantičke 
+modele podataka
+90-tih godina 20 -tog veka Objektno -orijentisani DBMS 
+(OODBMS) i Objektno -relacioni DBMS (ORDBMS)
+Početak ovog veka
+Postrelacione BP
+XML native BP
+... Relacione baze podataka + nove tehnologije NoSQL baze podataka
+Trendovi vraćanja na stare, dobre vrednosti RDBMS
+35Uvod u baze podataka
+Kraj predavanja
+Pitanja ???
+Baze
+ podataka
+Prof. dr Leonid Stoimenov
+Katedra za računarstvo
+Elektronski fakultet u Nišu
+36

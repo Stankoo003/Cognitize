@@ -1,0 +1,219 @@
+PROGRAMSKI JEZICI
+Opis (definicija programskih jezika )
+Komponente u opisu programskog jezika
+Opis leksike pomoću regularnih izraza
+Opis sintakse pomoću beskonteksnih gramatikaDefinicija programskog jezika
+Azbuka
+Neprazan skup simbola od kojih se prave reči jezika
+Leksika nauka o rečima
+Uprogramskim jezicima definiše vrste reči koje se u programskom 
+jeziku koriste i kako se one grade
+Definiše se formalno pomoću regularnih izraza
+Sintaksa nauka o rečenicama 
+U programskim jezicima definiše strukturu programa
+Definiše se formalno pomoću beskonteksnih gramatika
+Semantika nauka o značenju rečenica
+U programsikm jezicima definiše veze izmedju strukturnih 
+elemenata koje sintaksa opisuje
+Definiše se neformalno pomoću govornog jezikaint a;
+bool b ;
+b=a;Azbuka programskih jezika
+Velika i mala slova engleske azbuke
+Dekadne cifre
+Specijalni znaciLeksika programskih jezika
+Definiše vrste reči
+Za svaku vrstu reči određuje njene moguće oblike i 
+značenje u programu ( TOKEN )
+Mogući oblici (zapisi) izvesne vrste reči se definišu 
+regularnim izrazimaVrste reči u višim programskim jezicima
+Ključne reči
+Svaka ima svoj jedinstveni zapis i jedinstveno sintaksno i semantičko značenje 
+(jedinstveni token)
+Simbolička imena (identifikatori)
+Služe za imenovanje različitih entiteta (simboličkih konstanti, promenljivih, 
+funkcija, tipova,...) koje programeri definišu u kodu
+Konstante (literali)
+Vrednosti različitih tipova -definisane za svaki elementarni tip podataka
+Operatori
+Specijalni znaci ili kombinacije specijalnih znaka koje služe za formiranje izraza
+Separatori 
+Specijalni znaci koji razdvajaju logičke celine u kodu, tj. različite sintaksne 
+elemente
+Beli simboli i komentari
+Delovi koda koje prevodilac ignoriše, nemaju nikakvo sintaksno ni semantičko 
+značenje nisu tokeni, koriste se da obezbede čitljivost i razumevanje kodaRegularni izrazi
+Definišu moguće oblike (zapise) određene vrste reči
+Sastavljeni su od:
+simbola koji čine azbuku programskog jezika i 
+metasimbola simbola sa specijalnim značenjem u regularnom 
+izrazuMetasimboli u regularnim izrazima
+() koriste se za kreiranje grupe
+[ ]alternativa (definišu izbor jenog iz skupa simbola navedenih unutar 
+zagrada)
+--koristi se za definisanje intervala simbola unutar alternative
++-označava da se prethodni simbol ili grupa može pojaviti jednom ili više 
+puta u zapisu
+*-označava da se prethodni simbol ili grupa može pojaviti ni jednom ili 
+više puta u zapisu
+?označava da se prethodni simbol ili grupa može, ali ne mora pojaviti u 
+zapisu
+.zamenjuje bilo koji simbol azbuke
+~ -zamenjuje bilo koji niz karaktera do znak aili grupe kojasledi
+|-izbor jedne od 2 alternative
+\-poništava specijalno značenje metakaraktera koji sledi ( takodje, unutar 
+alternative ili izmedju dvostrukih navodnika metakarakteri nemaju 
+specijalno značenje)Leksički elementi programskog jezika java
+Ključne reči :
+Leksički elementi programskog jezika java
+Simbolička imena niz karaktera sastavljen od velikih i 
+malih slova, cifara i simbola _ i$ u kojem prviznak ne 
+može biti cifra.
+[A-Za-z_$][A -Za-z0-1_$]*Leksički elementi programskog jezika java
+Konstante ili literali :
+Celobrojne
+Dekadne: Ozna čeni ili neoznačeni niz dekadnih cifara koji počinje cifrom 
+različitom od nule ilinula.
+([+-]?[1-9][0-9]*)|0
+Oktalne: Označeni ili neoznačeni niz oktalnih cifara koji počinje cifrom 0.
+[+-]?0[0-7]+
+Heksadekadne: Označeni ili neoznačeni niz heksadekadnih cifara koji 
+počinje prefiksom 0x.
+[+-]?0[xX][0-9A-Fa-f]+
+Binarne : Označeni ili neoznačeni niz binarnih cifara koji počinje 
+prefiksom 0b.
+[+-]?0[bB][01]+Leksički elementi programskog jezika java
+Konstante ili literali :
+Realne (tipadouble ): Ozna čeni ili neoznačeni niz dekadnih cifara 
+koji sadrži decimalnu tačku i/ili eksponent.
+([+-]?[0-9]+\.[0-9]*([Ee][+-]?[0-9]+)?)|([+-]?[0-9]+[Ee][+-]?[0-9]+)
+Znakovne (tipachar): Bilokojikarkter napisan izme đu apostrofa.
+'. '
+Logičke(tipaboolean ): true ili false.
+(true) |(false)
+Konstantni znakovni nizovi (tipastring ): Nizkarkter anapisan
+izme đu dvostrukih navoda.
+\"~\"Leksički elementi programskog jezika java
+Operatori po prioritetu :
+postfix expr++expr--
+unary ++expr--expr+expr-expr~ !
+multiplicative * / %
+additive + -
+shift << >> >>>
+relational < > <= >= instanceof
+equality == !=
+bitwise AND &
+bitwise exclusive OR ^
+bitwise inclusive OR |
+logical AND &&
+logical OR ||
+ternary ? :
+assignment = += -= *= /= %= &= ^= |= <<= >>= >>>=Leksički elementi programskog jezika java
+Separatori :
+( )Ograničavaju paremetre u definiciji ili pozivu metoda; regulišu redosled 
+izvršenja operacija u izrazima; ograđuju tipove u izrazima za konverziju 
+tipova; ograničavaju uslovne izraze u naredbama za kontrolu toka
+{ } Omeđuju blokove i vrednosti za inicijalizaciju polja
+[ ] Deklarišu tip polja i izdvajaju vrednosti iz polja
+; Definiše kraj naredbe
+,Razdvajaju identifikatore u deklaraciji promenljivih, povezuju izraze 
+npr. u zaglavlju petlje...
+.Selektuju atribut ili metodu iz nekog objekta, selektuju podpaket ili 
+klasu iz paketa...
+: Označava kraj labeleLeksički elementi programskog jezika java
+Komentari :
+Počinju simbolima // i završavaju se prelaskom na novi red
+//~\n
+Počinju simbolima /* i završavaju se simbolima */
+/\*~(\*/)
+Specijalna vrsta komentara koje alalizira alat za kreiranje tehničke 
+dokumentadije (JavaDoc), počinju simbolima /** i završavaju se 
+simbolima */
+/\*\*~(\*/)Definicija sintakse Beskonteksne gramatike
+Beskonteksne gramatike predstavljaju uređenu četvorku čiji si 
+elementi:
+Terminali (terminalni simboli) Reči jezika, odnosno njihovi tokeni. 
+Primer: if,then , else, ID, CONST, + ...
+Neterminali (neterminalni simboli) Pomoćne sintaksne promenljive
+kojima seoznačavaju skupovi reči.Neterminali seuvode dabise
+lakše definisale ispravne jezičke konstrukcije, kaoidabiselakše
+definisala hierahijska programskog jezika .
+Pimer :Expression, Statement, IfStatement, WhileStatement ...
+Startni simbol Neterminal iz kojeg se izvode ispravne jezičke 
+konstrukcije.
+Produkciono pravilo definiše način na koji se kombinuju terminalni i 
+neterminalni simboli da bi se kreirale složenije jezičke konstrukcije. 
+U opštem slučaju pravila su oblika:
+X  Y
+gde je X neterminalni simbolm a Y niz sastavljen od terminalnih i
+neterminalnih simbola.
+Primer: WhileStatement  while ( Expression ) StatementBeskonteksna gramatika koja definiše 
+aritmetičke izraze
+Terminali (terminalni simboli): 
+{ CONST , ID, +, -,*, /, (, )}
+Neterminali (neterminalni simboli) :
+{Expression ,Operator }
+Startni simbol :
+Expression
+Produkcion apravil a
+Expression Expression Operator Expression -Expression CONST
+Operator +-* /Sintaksno stablo
+Prikazuje kako je sagra đena neka jezička konstrukcija.
+Primer: 5*3+7
+Expression
++
+CONSTExpression Expression
+* Expression Expression
+CONST CONSTNačini predstavljanja beskonteksnih 
+gramatika
+Bekusova normalna forma
+BS notacija
+Sintaksni dijagramiBekusova normalna forma
+Prvi put upotrebljena za definisanje jezika ALGOL 58
+BNF notacija se sastoji od konačnog broja metalingvističkih formula 
+(produkcionih pravila) koje sadže:
+Metalingvističe konstante (terminalne simbole),
+Metalingvističke promenljive (neterminalne simbole) koje imenuju određene sintaksne 
+celine u programu i pišu se između simbola < i >.
+Metasimboli
+::=  -po definiciji je  -izbor jedne od više alternativa
+Pravila su oblika :
+MetalingvistickaPromenljiva ::=NizMetalingvistickihKonstantiIPromenljivihDefinicija aritmeti čkih izraza pomoću BNF
+<expression > ::= <expression > <operator > <expression>
+-<expression >CONST
+<operator > ::= +-* /BS notacija
+Zasniva se naWirtovoj modifikovanoj Bekusovoj normalnoj formi .
+Uvodi veći broj metasimbola:
+= -zamenjuje simbol ::=
+{} -ozna čavaju višestruko ponavljanje skupa simbola unutar njih (uključujućiinijednom );
+[] -ozna čavaju opcione elemente ;
+  označavaju t erminaln esimbol e;
+_-povezuje veći broj reči u jedno ime metalingvističke promenljive;
+(*  *)ograničavaju komentar u opisu sintakse programskih jezika ;
+Primer pravila u BS notaciji :
+variable_declaration = type id [ = const  ] {, id [ = const  ] } ;Sintaksni dijagrami
+Orjentisani grafovi koji opisuju sintaksu programskog jezika
+Svakom produkcionom pravilu odgovara po jedan sintaksni 
+dijatram
+Na ulaznom potegu grafa nalazi se neterminalni simbol koji se 
+defini še (simbol sa leve strane produkcionog pravila)
+Graf sadrži dve vrste čvorova:
+Terminalne označene krugovima (ili elipsama) koji odgovaraju 
+terminalnim simbolima gramatika
+Neterminalne označene pravougaonicima koji odgovaraju 
+neterminalnim simbolima gramatike
+Grane u grafu definišu redosled pojavljivanja simbola u pravilu
+Često korišćeni u opisu prgramskog jezika PascalPrimer sintaksnog dijagrama
+blokSemanti čka pravila programskih jezika
+Promenljive koje učestvuju u izrazu moraju biti 
+prethodno deklarisane (kod jezika sa statičkom 
+tipizacijom),
+Promenljiva čija se vrednost koristi u izrazu mora biti 
+prethodno inicijalizovana.
+Za svaku operaciju je definisan tip podataka nad kojim 
+se može primenjivati.
+Lista stvarnih parametara u pozivu funkcije mora biti 
+usaglašena sa listom fiktivnih parametara u definiciji 
+funkcije (po broju i tipovima),
+Van klase se mogu koristiti samo članovi sa javnim 
+pravom pristupa.
+...

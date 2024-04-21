@@ -1,0 +1,22 @@
+[
+    {
+      "prednja": "Šta je programski jezik?",
+      "zadnja": "Programski jezik je skup pravila i simbola koji se koristi za pisanje instrukcija za računar."
+    },
+    {
+      "prednja": "Koje su glavne komponente programskog jezika?",
+      "zadnja": "Glavne komponente programskog jezika su azbuka, leksika, sintaksa i semantika."
+    },
+    {
+      "prednja": "Šta je leksika u programskom jeziku?",
+      "zadnja": "Leksika definiše vrste reči u programskom jeziku i kako se formiraju. Regularni izrazi se koriste za formalno definisanje lekse."
+    },
+    {
+      "prednja": "Šta je sintaksa u programskom jeziku?",
+      "zadnja": "Sintaksa definiše strukturu programa. Beskontekstne gramatike se koriste za formalno definisanje sintakse."
+    },
+    {
+      "prednja": "Šta je semantika u programskom jeziku?",
+      "zadnja": "Semantika definiše značenje programskih konstrukcija. Semantička pravila obezbeđuju da program ima smisao."
+    }
+  ]
