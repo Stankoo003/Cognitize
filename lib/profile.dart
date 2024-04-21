@@ -6,7 +6,7 @@ import 'package:video/medjuscreen.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
-  static const String uri = "http://192.168.0.100:5000/predmeti";
+  static const String uri = "http://192.168.0.108:5000/predmeti";
 
   Future<List<String>> fetchNames() async {
     final response = await http.get(Uri.parse(uri));

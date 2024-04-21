@@ -30,7 +30,7 @@ class medjuScreen extends StatelessWidget {
             ElevatedButton(
               child: Text("Materijal"),
               onPressed: () {
-                //TODO
+                
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Color(0xFFC99750),
@@ -73,7 +73,7 @@ class medjuScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => PitanjaScreen(),
+                    builder: (context) => PitanjaScreen(ime: ime),
                   ),
                 );
               },

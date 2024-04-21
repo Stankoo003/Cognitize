@@ -29,7 +29,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  static String uri = "http://192.168.0.100:5000/pitanja/";
+ static String uri = "http://192.168.0.108:5000/pitanja/";
 
   String front = "";
   String back = "";
@@ -93,7 +93,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void initState() {
-    uri = "http://192.168.0.100:5000/pitanja/"+widget.name;
+    uri = "http://192.168.0.108:5000/pitanja/"+widget.name;
     
     _fetchData();
     super.initState();
