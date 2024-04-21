@@ -10,7 +10,7 @@ class PitanjaScreen extends StatefulWidget {
   final String ime;
 
   const PitanjaScreen({super.key, required this.ime});
-  static const String uri = "http://192.168.0.108:5000/pitaj/AOR2";
+  static const String uri = "http://192.168.0.108:5000/pitaj/";
 
   @override
   State<PitanjaScreen> createState() => _PitanjaScreenState();
@@ -22,7 +22,7 @@ class _PitanjaScreenState extends State<PitanjaScreen> {
 
   Future<String> SaljiPoruku(String string) async {
       final response =
-          await http.get(Uri.parse(PitanjaScreen.uri + "/" + string));
+          await http.get(Uri.parse(PitanjaScreen.uri+"/"+widget.ime + "/" + string));
       if (response.statusCode == 200) {
         print(PitanjaScreen.uri);
         return response.body;

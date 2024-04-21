@@ -1,7 +1,10 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'dart:math';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+
 
 import 'package:video/profile.dart'; // it will allows us to get the pi constant
 
@@ -85,6 +88,11 @@ class _HomePageState extends State<HomePage> {
           print("Tesko selected!");
           front = listaPredmeta[listElementCounter]["prednja"];
           back = listaPredmeta[listElementCounter]["zadnja"];
+        }else if(index==2){
+         //String s= "http://192.168.0.108:5000/getPDF/" +widget.name;
+           
+
+
         }
        
       }
